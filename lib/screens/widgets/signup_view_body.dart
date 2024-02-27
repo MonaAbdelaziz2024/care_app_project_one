@@ -1,5 +1,4 @@
 import 'package:care_app_project_one/screens/widgets/custom_app_bar_items.dart';
-import 'package:care_app_project_one/screens/widgets/custom_background.dart';
 import 'package:care_app_project_one/screens/widgets/custom_signup_items.dart';
 import 'package:flutter/material.dart';
 

@@ -1,5 +1,4 @@
 import 'package:care_app_project_one/screens/widgets/custom_app_bar_items.dart';
-import 'package:care_app_project_one/screens/widgets/custom_background.dart';
 import 'package:care_app_project_one/screens/widgets/signup_info_two.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +16,7 @@ class SignupViewTwoBody extends StatelessWidget {
             Navigator.of(context).pop();
           },
         ),
-        SignupInfoTwo(),
+        const SignupInfoTwo(),
       ])
     ]);
   }

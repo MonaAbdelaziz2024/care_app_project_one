@@ -44,7 +44,7 @@ class CustomSignupItems extends StatelessWidget {
                 ),
                 child: Text("Username", style: Styles.Style14),
               ),
-              Container(width: 350, height: 52, child: CustomTextField()),
+              SizedBox(width: 350, height: 52, child: CustomTextField()),
               const Padding(
                 padding: EdgeInsets.only(
                   left: 28,
@@ -53,7 +53,7 @@ class CustomSignupItems extends StatelessWidget {
                 ),
                 child: Text("Email", style: Styles.Style14),
               ),
-              Container(width: 350, height: 52, child: CustomTextField()),
+              SizedBox(width: 350, height: 52, child: CustomTextField()),
               const Padding(
                 padding: EdgeInsets.only(
                   left: 28,
@@ -62,7 +62,7 @@ class CustomSignupItems extends StatelessWidget {
                 ),
                 child: Text("Password", style: Styles.Style14),
               ),
-              Container(
+              SizedBox(
                   width: 350,
                   height: 52,
                   child: CustomTextField(
@@ -88,21 +88,23 @@ class CustomSignupItems extends StatelessWidget {
                     Text.rich(
                       TextSpan(
                         text: 'I agree to the ',
-                        style: Styles.Style11,
+                        style: Styles.Style11.copyWith(fontWeight: FontWeight.w800),
                         children: <TextSpan>[
                           TextSpan(
                             text: 'Terms & Conditions',
                             style: Styles.Style11.copyWith(
-                                color: Color(0xff0062D6)),
+                                color: const Color(0xff0062D6),
+                                fontWeight: FontWeight.w800),
                           ),
                           TextSpan(
                               text: ' and ',
-                              style: Styles.Style11,
+                              style: Styles.Style11.copyWith(fontWeight: FontWeight.w800),
                               children: <TextSpan>[
                                 TextSpan(
                                     text: 'Privacy  Policy',
                                     style: Styles.Style11.copyWith(
-                                        color: Color(0xff0062D6)))
+                                        color: const Color(0xff0062D6),
+                                        fontWeight: FontWeight.w800))
                               ])
                         ],
                       ),
@@ -114,7 +116,7 @@ class CustomSignupItems extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) {
-                    return SignupViewTwo();
+                    return const SignupViewTwo();
                   }));
                 },
                 text: "Next",

@@ -20,11 +20,11 @@ class SignupInfoTwo extends StatelessWidget {
                 topLeft: Radius.circular(25), topRight: Radius.circular(25)),
             color: Colors.white)
             , child:  Column(children: [
-CustomDropDownList(items: ['item1', 'item2'], width: 130, height: 40),
-SizedBox(height: 40,),
+const CustomDropDownList(items: ['item1', 'item2'], width: 130, height: 40),
+const SizedBox(height: 40,),
 CustomRadioButton(text: 'Male', value: 1, width: 140, height: 40),
-SizedBox(height: 40,),
-CustomDateOfBirth(),
+const SizedBox(height: 40,),
+const CustomDateOfBirth(),
             ])
             ,)
             ,);

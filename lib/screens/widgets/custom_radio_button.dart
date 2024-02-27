@@ -9,7 +9,7 @@ class CustomRadioButton extends StatefulWidget {
     this.valueChoose = 1, required this.width, required this.height,
   });
   final String text;
-  int? valueChoose;
+ int? valueChoose;
   final int value;
   final double width, height;
   @override
@@ -20,7 +20,7 @@ class _CustomRadioButtonState extends State<CustomRadioButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 48),
+      padding: const EdgeInsets.only(left: 48),
       width: widget.width,
       height: widget.height,
       decoration: BoxDecoration(
@@ -30,7 +30,7 @@ class _CustomRadioButtonState extends State<CustomRadioButton> {
       child: Row(
         children: [
           Text(widget.text,style: Styles.Style14,),
-          SizedBox(
+          const SizedBox(
             width: 8,
           ),
           Radio(

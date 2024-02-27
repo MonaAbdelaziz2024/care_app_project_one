@@ -1,4 +1,3 @@
-import 'package:care_app_project_one/constant.dart';
 import 'package:care_app_project_one/styles.dart';
 import 'package:datepicker_dropdown/datepicker_dropdown.dart';
 import 'package:datepicker_dropdown/order_format.dart';
@@ -22,7 +21,7 @@ class _CustomDateOfBirthState extends State<CustomDateOfBirth> {
          
                   border:  OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Color(0xffd4d5ee)),
+                    borderSide: const BorderSide(color: Color(0xffd4d5ee)),
                   ),
                   // border: OutlineInputBorder(
                   //     borderRadius: BorderRadius.circular(10)
@@ -42,7 +41,7 @@ class _CustomDateOfBirthState extends State<CustomDateOfBirth> {
              onChangedMonth: (value) => print('onChangedMonth: $value'),
              onChangedYear: (value) => print('onChangedYear: $value'),
               boxDecoration: BoxDecoration(
-                color: Color(0xffd4d5ee),
+                color: const Color(0xffd4d5ee),
                 borderRadius: BorderRadius.circular(10),
 
 

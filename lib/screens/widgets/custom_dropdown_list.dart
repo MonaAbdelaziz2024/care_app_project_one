@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomDropDownList extends StatefulWidget {
   const CustomDropDownList({super.key, required this.items, required this.width, required this.height});
@@ -15,7 +14,7 @@ class _CustomDropDownListState extends State<CustomDropDownList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       width:widget.width ,
       height: widget.height,
       decoration: BoxDecoration(
@@ -26,7 +25,7 @@ class _CustomDropDownListState extends State<CustomDropDownList> {
         
         isExpanded: true,
           //hint: const Text('select'),
-          underline:SizedBox(),
+          underline:const SizedBox(),
          dropdownColor: const Color(0xffd4d5ee),
           icon: Image.asset('assets/images/chevron-down.png',width: 24,),
           iconSize: 24,

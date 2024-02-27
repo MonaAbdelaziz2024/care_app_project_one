@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:care_app_project_one/constant.dart';
 import 'package:flutter/material.dart';
 
