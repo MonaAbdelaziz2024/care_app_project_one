@@ -7,11 +7,19 @@ import 'package:care_app_project_one/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class CustomSignupItems extends StatelessWidget {
+class CustomSignupItems extends StatefulWidget {
   const CustomSignupItems({super.key});
 
   @override
+  State<CustomSignupItems> createState() => _CustomSignupItemsState();
+}
+
+class _CustomSignupItemsState extends State<CustomSignupItems> {
+  @override
   Widget build(BuildContext context) {
+    bool onTap = false;
+    Color color = Color(0xff0075FE);
+
     return Padding(
       padding: const EdgeInsets.only(
         top: 110,
@@ -32,7 +40,7 @@ class CustomSignupItems extends StatelessWidget {
                 padding: EdgeInsets.only(top: 12),
                 child: Text(
                   "Sign Up",
-                  style: Styles.Style36,
+                  style: Styles.Style42,
                   // textAlign: TextAlign.left,
                 ),
               ),
@@ -69,41 +77,45 @@ class CustomSignupItems extends StatelessWidget {
                     obscureText: true,
                   )),
               Padding(
-                padding: const EdgeInsets.only(top: 18),
+                padding: const EdgeInsets.only(top: 10),
                 child: Row(
                   // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    IconButton(
-                      color: Colors.blue,
-                      onPressed: () {},
-                      icon: const Icon(
-                        FontAwesomeIcons.solidCircleCheck,
-                        color: Color(0xff0075FE),
-                        size: 24,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 12),
+                      child: IconButton(
+                        // focusColor: color,
+                        //color: Colors.blue,
+                        onPressed: () {},
+                        icon: Icon(
+                          FontAwesomeIcons.solidCircleCheck,
+                          color: color,
+                          size: 20,
+                        ),
                       ),
-                    ),
-                    const SizedBox(
-                      width: 13,
                     ),
                     Text.rich(
                       TextSpan(
                         text: 'I agree to the ',
-                        style: Styles.Style11.copyWith(fontWeight: FontWeight.w800),
+                        style: Styles.Style11.copyWith(
+                            fontWeight: FontWeight.w800),
                         children: <TextSpan>[
                           TextSpan(
                             text: 'Terms & Conditions',
                             style: Styles.Style11.copyWith(
-                                color: const Color(0xff0062D6),
+                                color: const Color(0xff0062D6).withOpacity(.8),
                                 fontWeight: FontWeight.w800),
                           ),
                           TextSpan(
                               text: ' and ',
-                              style: Styles.Style11.copyWith(fontWeight: FontWeight.w800),
+                              style: Styles.Style11.copyWith(
+                                  fontWeight: FontWeight.w800),
                               children: <TextSpan>[
                                 TextSpan(
                                     text: 'Privacy  Policy',
                                     style: Styles.Style11.copyWith(
-                                        color: const Color(0xff0062D6),
+                                        color: const Color(0xff0062D6)
+                                            .withOpacity(.8),
                                         fontWeight: FontWeight.w800))
                               ])
                         ],
@@ -113,6 +125,7 @@ class CustomSignupItems extends StatelessWidget {
                 ),
               ),
               CustomButton(
+                nextIcon: true,
                 onTap: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) {
@@ -131,11 +144,12 @@ class CustomSignupItems extends StatelessWidget {
                       width: 130,
                       height: 1,
                     ),
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
                         'or',
-                        style: Styles.Style11,
+                        style: Styles.Style11.copyWith(
+                            fontWeight: FontWeight.w600),
                       ),
                     ),
                     Container(
@@ -156,7 +170,8 @@ class CustomSignupItems extends StatelessWidget {
                   const Text("Already have an account?  ",
                       style: Styles.Style11),
                   Text("Sign In",
-                      style: Styles.Style11.copyWith(color: Colors.blue)),
+                      style: Styles.Style11.copyWith(
+                          color: const Color(0xff0062D6).withOpacity(.9))),
                 ],
               ),
               const SizedBox(

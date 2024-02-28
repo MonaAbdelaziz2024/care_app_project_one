@@ -30,13 +30,14 @@ class CustomAppBarItems extends StatelessWidget {
                       size: 18,
                     ),
                   ),
-                ))
+                ),
+              )
             : const SizedBox(
-                width: 51,
+                width: 80,
               ),
         //SizedBox(width: 80,),
         Padding(
-          padding: const EdgeInsets.only(top: 21, left: 130),
+          padding: const EdgeInsets.only(top: 21, left: 100),
           child: Image.asset(
             kLogo,
           ),

@@ -6,10 +6,12 @@ class CustomRadioButton extends StatefulWidget {
     super.key,
     required this.text,
     required this.value,
-    this.valueChoose = 1, required this.width, required this.height,
+    this.valueChoose = 1,
+    required this.width,
+    required this.height,
   });
   final String text;
- int? valueChoose;
+  int? valueChoose;
   final int value;
   final double width, height;
   @override
@@ -29,19 +31,23 @@ class _CustomRadioButtonState extends State<CustomRadioButton> {
       ),
       child: Row(
         children: [
-          Text(widget.text,style: Styles.Style14,),
+          Text(
+            widget.text,
+            style: Styles.Style14,
+          ),
           const SizedBox(
-            width: 8,
+            width: 10,
           ),
           Radio(
-            //splashRadius: 1,
-              value: 1,
+              //splashRadius: 1,
+              value: widget.value,
               groupValue: widget.valueChoose,
               onChanged: (value) {
                 setState(() {
                   widget.valueChoose = value;
                 });
               }),
+              
         ],
       ),
     );
